@@ -15,6 +15,7 @@ from frappe.utils.response import build_response
 class ApiVersion(str, Enum):
 	V1 = "v1"
 	V2 = "v2"
+	V3 = "v3"
 
 
 def handle(request: Request):
@@ -24,6 +25,7 @@ def handle(request: Request):
 	APIs are versioned using second part of path.
 	v1 -> `/api/v1/*`
 	v2 -> `/api/v2/*`
+    v3 -> `/api/v3/*`
 
 	Different versions have different specification but broadly following things are supported:
 
